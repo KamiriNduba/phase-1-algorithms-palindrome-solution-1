@@ -1,13 +1,24 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // Convert the word to lowercase for case-insensitive comparison
+  const lowerCaseWord = word.toLowerCase();
+  
+  // Check if the reversed string is the same as the original
+  const reversedWord = lowerCaseWord.split('').reverse().join('');
+  return lowerCaseWord === reversedWord;
 }
 
 /* 
-  Add your pseudocode here
+  Pseudocode:
+  1. Convert the input word to lowercase.
+  2. Reverse the lowercase word.
+  3. Check if the reversed word is equal to the original word.
 */
 
 /*
-  Add written explanation of your solution here
+  Explanation:
+  - The function first converts the input word to lowercase to make the comparison case-insensitive.
+  - It then reverses the lowercase word using the split, reverse, and join array methods.
+  - Finally, it checks if the reversed word is equal to the original word and returns true if they are, and false otherwise.
 */
 
 // You can run `node index.js` to view these console logs
